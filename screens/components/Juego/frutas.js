@@ -23,4 +23,4 @@ export default [
     imge: IMAGEN5,
     name: 'Naranja',
   },
-].sort(() => 0.5 - Math.random() * 40);
+];

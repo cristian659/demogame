@@ -20,4 +20,4 @@ export default [
     img: IMAGEN4,
     name: 'pez',
   },
-].sort(() => 0.5 - Math.random() * 40);
+];
