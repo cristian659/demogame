@@ -15,10 +15,7 @@ export default [
     img: IMAGEN2,
     name: 'Banana',
   },
-  {
-    img: IMAGEN3,
-    name: 'Cereza',
-  },
+
   {
     img: IMAGEN4,
     name: 'Manzana',
@@ -26,13 +23,5 @@ export default [
   {
     img: IMAGEN5,
     name: 'Naranja',
-  },
-  {
-    img: IMAGEN6,
-    name: 'Pera',
-  },
-  {
-    img: IMAGEN7,
-    name: 'Uva',
   },
 ];

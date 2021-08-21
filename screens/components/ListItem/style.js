@@ -4,31 +4,21 @@ const styles = StyleSheet.create({
   Container: {
     width: '100%',
     height: Dimensions.get('window').height,
-    height: Dimensions.get('window').width,
-  },
-  titles: {
-    marginTop: '30%',
-    width: '100%',
-    alignItems: 'center',
-  },
-  title: {
-    fontSize: 40,
-    fontWeight: '500',
-  },
-
-  image: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-    position: 'absolute',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'column',
     flex: 1,
   },
-
-  buttonsContainer: {
-    width: '100%',
-    position: 'absolute',
-    bottom: 0,
-    marginBottom: 70,
+  image: {
+    width: 300,
+    height: 300,
+  },
+  img: {
+    padding: 12,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

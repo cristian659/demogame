@@ -19,22 +19,24 @@ import img from '../../assets/sonido/audiolog.png';
 
 import StyledButton from '../styledButton';
 
-let musciPath = require('../../assets/sonido/audio.mp4');
+let musciPath = require('../../assets/sonido/audio2.mp4');
 var music = new Sound(musciPath, error => {
   if (error) {
     Alert.alert('Falló la reproducción ...');
   }
 });
 
-const Intro = () => {
+const IntroPrueba = () => {
   const navigation = useNavigation();
   return (
     <ScrollView style={styles.scroll}>
       <View style={styles.container}>
-        <Text style={styles.title}>Shifting Atencional</Text>
+        <Text style={styles.title}>AnFu</Text>
         <Image source={imagen} style={styles.ima} />
         <Text style={styles.texto}>
-          Nombra los animales y Frutas que aparezcan
+          Instrucción: Ahora vas a ver unos dibujos con un animal y una fruta.
+          Toca el animal si el fondo del dibujo es amarillo y la fruta si el
+          fondo es azul
         </Text>
         <TouchableOpacity
           style={{marginTop: 15}}
@@ -43,7 +45,6 @@ const Intro = () => {
           }}>
           <Text
             style={{
-              color: '#4398ff',
               fontSize: 20,
               fontFamily: 'Lato-BlackItalic',
             }}>
@@ -56,7 +57,7 @@ const Intro = () => {
           <StyledButton
             type="primary"
             content={'Jugar'}
-            onPress={() => navigation.navigate('Animales')}
+            onPress={() => navigation.navigate('Juego')}
           />
         </View>
       </View>
@@ -64,4 +65,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default IntroPrueba;

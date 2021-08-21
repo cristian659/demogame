@@ -8,16 +8,12 @@ import IMAGEN7 from '../../assets/imagenesL/Uva.png';
 
 export default [
   {
-    imge: '../../assets/imagenesL/Fresa.png',
+    imge: IMAGEN1,
     name: 'Fresa',
   },
   {
-    imge: '../../assets/imagenesL/Fresa.png',
+    imge: IMAGEN2,
     name: 'Banana',
-  },
-  {
-    imge: IMAGEN3,
-    name: 'Cereza',
   },
   {
     imge: IMAGEN4,
@@ -27,12 +23,4 @@ export default [
     imge: IMAGEN5,
     name: 'Naranja',
   },
-  {
-    imge: IMAGEN6,
-    name: 'Pera',
-  },
-  {
-    imge: IMAGEN7,
-    name: 'Uva',
-  },
-];
+].sort(() => 0.5 - Math.random() * 40);

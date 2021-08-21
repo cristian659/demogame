@@ -5,7 +5,7 @@ import IMAGEN4 from '../../assets/imagenesL/Pez.png';
 
 export default [
   {
-    img: '../../assets/imagenesL/Fresa.png',
+    img: IMAGEN1,
     name: 'Perro',
   },
   {
@@ -20,4 +20,4 @@ export default [
     img: IMAGEN4,
     name: 'pez',
   },
-];
+].sort(() => 0.5 - Math.random() * 40);

@@ -11,16 +11,18 @@ import Intro from './screens/components/intro/index';
 import ListaAF from './screens/components/ListaAF/index';
 import Juego from './screens/components/Juego/index';
 import ListaFJ from './screens/components/ListaFj/index';
+import IntroPrueba from './screens/components/introprueba/index';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Intro} />
         <Stack.Screen name="Animales" component={ListaAF} />
         <Stack.Screen name="Frutas" component={ListaFJ} />
+        <Stack.Screen name="prueba" component={IntroPrueba} />
         <Stack.Screen name="Juego" component={Juego} />
       </Stack.Navigator>
     </NavigationContainer>

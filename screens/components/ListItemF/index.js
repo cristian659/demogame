@@ -15,23 +15,13 @@ import styles from './style';
 import StyledButton from '../styledButton';
 
 const ListItemF = props => {
-  const {name, img} = props.frutas;
+  const {img} = props.frutas;
   const navigation = useNavigation();
 
   return (
     <View style={styles.Container}>
-      <ImageBackground source={img} style={styles.image} />
-
-      <View style={styles.titles}>
-        <Text style={styles.title}>{name}</Text>
-      </View>
-
-      <View style={styles.buttonsContainer}>
-        <StyledButton
-          type="primary"
-          content={'Jugar'}
-          onPress={() => navigation.navigate('Juego')}
-        />
+      <View style={styles.img}>
+        <ImageBackground source={img} style={styles.image} />
       </View>
     </View>
   );
