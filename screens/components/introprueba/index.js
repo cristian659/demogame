@@ -35,8 +35,8 @@ const IntroPrueba = () => {
         <Image source={imagen} style={styles.ima} />
         <Text style={styles.texto}>
           Instrucción: Ahora vas a ver unos dibujos con un animal y una fruta.
-          Toca el animal si el fondo del dibujo es amarillo y la fruta si el
-          fondo es azul
+          Toca el animal si el fondo del dibujo es blanco y la fruta si el fondo
+          es azul
         </Text>
         <TouchableOpacity
           style={{marginTop: 15}}
@@ -57,7 +57,7 @@ const IntroPrueba = () => {
           <StyledButton
             type="primary"
             content={'Jugar'}
-            onPress={() => navigation.navigate('Juego')}
+            onPress={() => navigation.navigate('Prueba1')}
           />
         </View>
       </View>

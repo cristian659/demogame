@@ -6,18 +6,24 @@ import IMAGEN4 from '../../assets/imagenesL/Pez.png';
 export default [
   {
     img: IMAGEN1,
-    name: 'Perro',
+    correcta: 'animal',
+    animal: 'animal',
   },
   {
     img: IMAGEN2,
-    name: 'gato',
+    correcta: 'animal',
+    animal: 'animal',
   },
   {
     img: IMAGEN3,
-    name: 'pajaro',
+
+    correcta: 'animal',
+    animal: 'animal',
   },
   {
     img: IMAGEN4,
-    name: 'pez',
+
+    correcta: 'animal',
+    animal: 'animal',
   },
 ];

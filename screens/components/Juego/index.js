@@ -8,13 +8,19 @@ import ImagenF from './frutas';
 const juego = () => {
   const [bgColor, setbgColor] = useState('rgb(255, 255, 255)');
   const [touchNo, settouchNo] = useState(0);
-  const colors = ['#0071BC', '#E6CF2B'];
+  const colors = ['#1ea1e6', '#FFFFFF'];
   const [img, setImg] = useState('');
   const [imge, setImge] = useState('');
   const [imgActual, setImgActual] = useState(0);
   const [imgActual1, setImgActual1] = useState(0);
   const [misDatos, setMisDatos] = useState(ImagenA);
   const [misFrutas, setMisFrutas] = useState(ImagenF);
+  const [puntos, setPuntos] = useState(0);
+  const [correcta, setCorrecta] = useState('');
+  const [correctaF, setCorrectaF] = useState('');
+
+  const [animal, setAnimal] = useState('');
+  const [fruta, setFruta] = useState('');
 
   useEffect(() => {
     NuevaImagen1();
@@ -23,9 +29,12 @@ const juego = () => {
   }, []);
 
   const NuevaImagen1 = () => {
-    console.log(imgActual);
     setImg(misDatos[imgActual].img);
     setImge(misFrutas[imgActual1].imge);
+    setAnimal(misDatos[imgActual].animal);
+    setFruta(misDatos[imgActual].fruta);
+    setCorrecta(misDatos[imgActual].correcta);
+    setCorrectaF(misDatos[imgActual].correctaF);
     changeBg();
   };
 
@@ -40,10 +49,10 @@ const juego = () => {
   };
 
   const changeBg = () => {
-    const index = Math.random() * 10 < 0.5 ? 0 : 1;
+    let index = Math.floor(Math.random() * (2 - 0)) + 0;
 
     while (index === colors) {
-      const index = Math.random() * 10 < 0.1 ? 0 : 1;
+      index = Math.floor(Math.random() * (2 - 0)) + 0;
     }
 
     let newBgColor = colors[index];
@@ -58,6 +67,26 @@ const juego = () => {
       Alert.alert('se acabo el juego');
     }
   };
+  const verificacionA = opcion => {
+    if (bgColor === colors[1]) {
+      if (opcion === correcta) {
+        setPuntos(puntos + 1);
+        console.log(puntos);
+      }
+      if (opcion != correcta) {
+      }
+    }
+    siguiente();
+  };
+  const verificacionF = opcion => {
+    if (bgColor === colors[0]) {
+      if (opcion === correctaF) {
+        setPuntos(puntos + 1);
+        console.log(puntos);
+      }
+    }
+    siguiente();
+  };
 
   return (
     <View style={[styles.container, {backgroundColor: bgColor}]}>
@@ -65,7 +94,7 @@ const juego = () => {
         <TouchableHighlight
           style={styles.botonAnimal}
           onPress={() => {
-            siguiente();
+            verificacionA(animal);
           }}>
           <Image source={img} style={styles.image1} />
         </TouchableHighlight>
@@ -75,12 +104,11 @@ const juego = () => {
         <TouchableHighlight
           style={styles.botonAnimal}
           onPress={() => {
-            siguiente();
+            verificacionF(fruta);
           }}>
           <Image source={imge} style={styles.image1} />
         </TouchableHighlight>
       </View>
-      <Text style={styles.button}>{touchNo}</Text>
     </View>
   );
 };
@@ -88,6 +116,8 @@ const juego = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 12,
+    width: '100%',
+    height: '100%',
     flex: 1,
     backgroundColor: '#0071BC',
     display: 'flex',
@@ -95,6 +125,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   primero: {
+    padding: 50,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -102,6 +133,7 @@ const styles = StyleSheet.create({
   },
 
   segundo: {
+    padding: 50,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

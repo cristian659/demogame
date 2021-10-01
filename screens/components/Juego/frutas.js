@@ -9,18 +9,22 @@ import IMAGEN7 from '../../assets/imagenesL/Uva.png';
 export default [
   {
     imge: IMAGEN1,
-    name: 'Fresa',
+    fruta: 'fruta',
+    correctaF: 'fruta',
   },
   {
     imge: IMAGEN2,
-    name: 'Banana',
+    fruta: 'fruta',
+    correctaF: 'fruta',
   },
   {
     imge: IMAGEN4,
-    name: 'Manzana',
+    fruta: 'fruta',
+    correctaF: 'fruta',
   },
   {
     imge: IMAGEN5,
-    name: 'Naranja',
+    fruta: 'fruta',
+    correctaF: 'fruta',
   },
 ];

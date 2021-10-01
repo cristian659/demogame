@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    width: 300,
-    height: 300,
+    marginTop: 30,
+    width: 200,
+    height: 200,
   },
   img: {
     padding: 12,
